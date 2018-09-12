@@ -1,0 +1,49 @@
+.wrapper
+{
+    width: 1000px;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+#currencies 
+{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#currencies td, #currencies th 
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#currencies td
+{
+    padding: 2px !important;
+}
+
+#currencies tr:nth-child(even){background-color: lightgrey;}
+
+/*#currencies tr:hover {background-color: #ddd;}*/
+
+#currencies th 
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#currencies input
+{
+    height: 20px;
+}
+
+#currencies button
+{
+    padding: 0px;
+    width: 185px;
+    padding: 0px
+}
