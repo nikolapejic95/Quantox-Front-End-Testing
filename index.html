@@ -12,12 +12,25 @@
 
 <body>
 
+    <div id="loader-overlay">
+        <img src="public/img/loader.gif"/>
+    </div>
+    
     <div class="wrapper">
         
         <h2>In the table bellow, you can see the data about top 50 cryptocurrencies currently on the market.</h2>
 
         <table id="currencies">
         </table>
+
+        <p>Pagination - Please select your page</p>
+        <ul id="pagination">
+           <li id="page-1" onclick="changePage(0)" style="color: blue;">1</li> 
+           <li id="page-2" onclick="changePage(1)">2</li>
+           <li id="page-3" onclick="changePage(2)">3</li>
+           <li id="page-4" onclick="changePage(3)">4</li>
+           <li id="page-5" onclick="changePage(4)">5</li>
+        </ul>
 
     </div>
 

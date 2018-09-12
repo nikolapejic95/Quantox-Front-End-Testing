@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div id="loader-overlay">
+        <img src="public/img/loader.gif"/>
+    </div>
+    
+    <div class="wrapper" id="details-everything" style="text-align: left;">
+        
+        <h1 id="details-heading"></h1>
+        <p style="margin: 0px;">(Website slug: <span id="details-website"></span>)
+        <ul>
+            <li>Rank <span style="color: green" id="details-rank">1</span> cryptocurrency at the moment</li>
+            <li>
+                Supplies: 
+                <ul>
+                    <li>Circulating Supply: <span style="color: green;" id="details-circulating"></span></li>
+                    <li>Total Supply: <span style="color: green;" id="details-total"></span></li>
+                    <li>Max Supply: <span style="color: green;" id="details-max"></span></li>
+                </ul>
+            </li>
+            <li>Current price: <span style="color: green;" id="details-price"></span> $ (USD)</li>
+            <li>Volume in last 24 hours: <span style="color: green;" id="details-volume"></span></li>
+            <li>Market Cap: <span style="color: green;" id="details-market"></span></li>
+            <li>Percent change in last 1 hour: <span style="color: green;" id="details-1hour"></span></li>
+            <li>Percent change in last 24 hours: <span style="color: green;" id="details-24hours"></span></li>
+            <li>Percent change in last 7 days: <span style="color: green;" id="details-7days"></span></li>
+        </ul>
+        <p>Last updated: <span style="color: green;" id="details-lastupdated"></span></p>
+    
+    </div>
+
+    <script src="public/js/details.js"></script>
+
+</body>
+
+</html>

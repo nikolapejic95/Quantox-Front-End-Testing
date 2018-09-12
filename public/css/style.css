@@ -4,6 +4,29 @@
     margin: auto;
     display: block;
     text-align: center;
+    padding-top: 30px;
+}
+
+#loader-overlay
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 1000;
+}
+
+#loader-overlay img
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
 }
 
 #currencies 
@@ -11,6 +34,8 @@
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #currencies td, #currencies th 
@@ -46,4 +71,23 @@
     padding: 0px;
     width: 185px;
     padding: 0px
+}
+
+#pagination
+{
+    padding: 0px;
+}
+
+#pagination li
+{
+    display: inline;
+    cursor: pointer;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+#details-everything span
+{
+    font-weight: bold !important;
 }
