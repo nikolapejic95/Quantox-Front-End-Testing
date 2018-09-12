@@ -4,5 +4,6 @@ https://api.coinmarketcap.com/v2/ticker/?sort=id
 
 since its accurate and gets everything they have in the api. I need to show
 50 most valuable cryptocurrencies, thats the problem, since api does not have
-the sort option to actually sort the criptocurrencies by their price.
+the sort option to actually sort the criptocurrencies by their price. However,
+I will get first 50 by rank and then sort it by the price.
 

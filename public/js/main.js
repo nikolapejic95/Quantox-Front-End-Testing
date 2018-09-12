@@ -2,6 +2,9 @@
 
 var currentPage = 0;
 
+var lastTotal = 0;
+if (parseFloat(window.localStorage.getItem("lastTotal")) > 0) lastTotal = parseFloat(window.localStorage.getItem("lastTotal"));
+
 var info = "";
 function requestData() {
     var data = new Promise(function (resolve, reject) {
@@ -65,6 +68,7 @@ function fillTheTable() {
 
         table.innerHTML = tableContents;
     }
+    checkEarnings();
 }
 
 var tableHeading = "<tr> <th>Name</th> <th>Short Name</th> <th>$ Value</th> <th>Last 24</th><th>Amount you own</th><th>$ value of your coin</th></tr>";
@@ -93,6 +97,7 @@ function saveVal(n, amount) {
     console.log(amount);
     var prod = value * amount;
     console.log(prod);
+    checkEarnings();
     document.getElementById("save-total-" + n).innerHTML = "$ " + parseFloat(Math.round(prod * 100) / 100).toFixed(2);
 }
 
@@ -107,4 +112,25 @@ function changePage(n) {
     currentPage = n;
     document.getElementById("page-" + (currentPage + 1)).style.color = "blue";
     fillTheTable();
+}
+
+function checkEarnings() {
+    var currentTotal = 0;
+    for (var i = 0; i < 50; i++) {
+        var value = window.localStorage.getItem("val" + info[i].id);
+        if (parseFloat(value) > 0) {
+            currentTotal += info[i].quotes.USD.price * value;
+        }
+    }
+    window.localStorage.setItem("lastTotal", currentTotal);
+
+    var el = document.getElementById("from-last-time");
+    var dif = currentTotal - lastTotal;
+    if (dif > 0) {
+        el.innerHTML = "You have <span style=\"color: green;\">gained</span> " + dif.toFixed(2) + "$ from the last time you visited!";
+    } else if (dif < 0) {
+        el.innerHTML = "You have <span style=\"color: red;\">lost</span> " + -1 * dif.toFixed(2) + "$ from the last time you visited!";
+    } else {
+        el.innerHTML = "There were no changes in the earnings from the last time you visited.";
+    }
 }

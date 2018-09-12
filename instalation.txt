@@ -1,0 +1,2 @@
+It should be straighforward, but since I'm using LESS CSS preprocessor, it would need to be on localhost at least,
+or at any other host. CSS usually won't work if just opened in browser in this case.
